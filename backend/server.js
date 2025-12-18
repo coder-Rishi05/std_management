@@ -1,6 +1,11 @@
 import express from "express";
+import connectDB from "./src/db.js";
 
 const app = express();
+
+// connect databse
+
+connectDB();
 
 app.get("/", (req, res) => {
   res.send("Server started ==> hello");
